@@ -1,0 +1,9 @@
+{
+  "name": "LukesAdditionalSuits",
+  "version_number": "1.0.4",
+  "website_url": "https://github.com/larryr1/LC-Lukes-Additional-Suits/",
+  "description": "Adds additional suits specific to our \"Random lethal company crap\" Discord server. A clone of Additional Suits v1.0.2 by AlexCodesGames.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}

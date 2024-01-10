@@ -1,0 +1,9 @@
+{
+    "name": "HandMirror",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/Spiderbuttons",
+    "description": "The magnifying glass is now a hand-mirror for keeping coilheads off your back.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
