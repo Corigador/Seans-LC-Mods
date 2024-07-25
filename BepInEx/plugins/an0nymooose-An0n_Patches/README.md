@@ -22,3 +22,5 @@ Todo: No config to turn off crouch jump/hold since it's a bit messy.
 # Version 1.0.2-1.0.3
 - Fixed HP/SP HUD to be on same layer as other text, no more incorrect offsetting at various resolutions.
 - HP/SP was changing position based on power level of electric devices, fixed.
+# Version 1.0.4
+- Fixed crouch settings only working for players that bound it to the CTRL key (Thanks [OoLunar](https://thunderstore.io/c/lethal-company/p/OoLunar/))

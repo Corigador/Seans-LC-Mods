@@ -1,7 +1,58 @@
 # Changelog
 
-# Upcoming
-[] Implement Stun Grenade death
+# 2.0.0
+This update represents a major refactor of Coroner's codebase.
+## Added
+- Added new causes of death for version 50.
+- Added new causes of death for version 55/56.
+- Added a cause of death specifically for dying of falling in pits in the facility.
+- Split up causes of death for coworkers murdering with different weapons into different types (for example, Stop Signs vs Knives).
+- Added a documented `Coroner.API` class to make it easy for mods to add their own integrations.
+    - NOTE: This feature is not currently 100% complete as mods cannot display their own custom causes of death right now.
+- Added a `test` language which displays generic death messages for debugging purposes.
+## Changed
+- Replaced `LC_API` with `StaticNetcodeLib` for more reliable, less bloated networking that doesn't depend on an outdated library.
+## Removed
+- Removed all languages except for English, due to the other languages now having missing causes of death. A long-term solution for this problem will come later.
+## Fixed
+- Fixed a bug where leaving the game before the Performance Report and then joining a new lobby would not clear causes of death, resulting in incorrect causes of death being displayed later.
+## Known Issues
+- Coroner may sometimes fail to distinguish between the driver and passenger of the Company Cruiser.
+
+# 1.6.2
+## Fixed
+- Fixed an issue where Coroner fails to detect the config folder (even when it is in the proper location).
+
+# 1.6.1
+## Fixed
+- Improved the clarity of the error messages for when people install the mod incorrectly (you won't get this error if you use R2Modman!).
+
+# 1.6.0
+## Added
+- Added new custom messages for specific causes of death:
+    - Holding a Stun Grenade
+    - Extension Ladder
+- Added support for the expanded Unicode character set while [FontFixer](https://thunderstore.io/c/lethal-company/p/EliteMasterEric/FontFixer/) is installed.
+- Added a new Spanish localization.
+- Added a new German localization.
+- Added a new Italian localization.
+- Added a new Korean localization.
+- Added a new Hungarian localization.
+- Added a new Chinese (Simplified) localization.
+- Added a new Portuguese (Brazilian) localization.
+## Changed
+- Numerous translation changes.
+    - The English Translation now has additional notes to assist other translators.
+- Moved the localization files into the config folder.
+    - This should allow modpacks to properly override them.
+- Changed translation handling to fallback to English if specific lines are missing.
+    - This applies when some lines are present and some aren't.
+## Fixed
+- Fixes for Lethal Company v49.
+
+# 1.5.3
+## Fixed
+- Fixed a build issue with 1.5.2.
 
 # 1.5.2
 ## Fixed

@@ -1,10 +1,11 @@
 # BONK Hit SFX
 Replaces the hitSFX of the shovel and alike tools with the BONK SFX.
 
-Compatible with V45 and all other mods. This is a client-side mod and only those with it installed will have its effects.
+Compatible with V47 and all other mods. This is a client-side mod and only those with it installed will have its effects.
 
 ## r2modman Installation
-1. Select pack from r2modman and install
+1. Via r2modman, install BepInEx
+2. Via r2modman, install BonkHitSFX
 
 ## Thunderstore App Installation
 - NOT TESTED. Install at own risk
@@ -24,3 +25,4 @@ See the linked video for a preview of the mod: https://www.youtube.com/watch?v=c
 - 1.0.2: Patched bugs when playing in multiplayer credited to [rafl's BonkHitSfxFixed](https://thunderstore.io/c/lethal-company/p/rafl/BonkHitSfxFixed/). Thank you ralf I love you
 - 1.0.3: Updated readme.
 - 1.0.4: Updated readme.
+- 1.0.5: Updated readme.

@@ -1,9 +1,0 @@
-{
-    "name": "StorePrices",
-    "version_number": "1.1.1",
-    "website_url": "https://github.com/Giuseppezeta/LethalCompany_Store_Prices.git",
-    "description": "This Mod let you alter store prices. This is a Client-Side mod that works on all the servers.",
-    "dependencies": [
-        "BepInEx-BepInExPack-5.4.2100"
-    ]
-}

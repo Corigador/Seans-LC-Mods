@@ -1,3 +1,297 @@
+# 2.1.25
++ Slight changes to prevent some mod conflicts with AdvancedCompany.
+# 2.1.24
++ Scan nodes should now properly be hidden while emoting in third person. Previously, they would appear, but in the wrong position, and it looked like a mess.
++ Swapping between third and first person while already performing an emote will now correctly hide/show any cosmetics from MoreCompany.
+# 2.1.23
++ Reapplied patch that should correctly show the player's local body on the ship camera, and on players' helmet cameras (Helmet_Cameras mod)
++ Re-enabled the DressGirl (little girl) patch so she doesn't appear on these cameras. (or any other cameras viewing layer 23, such as MirrorDecor and probably others)
+# 2.1.22
++ Fixed bug where your player model wouldn't appear while emoting.
++ You should no longer see a second pair of arms while emoting.
++ Updated mod description to show V55 compatibility.
+# 2.1.21
++ Fixed an bug in 2.1.20 that prevented you from emoting with emote prop objects, such as the saxophone.
+# 2.1.20
++ Revised how the third person renders the player to be more straight-forward and more consistent. (less prone to visual bugs)\n
+Please note: If you find a visual bug that is present in 2.1.20, please let me know on the github. It's likely a small oversight I made.
++ This should fix the bug with MoreCompany were players without cosmetics would sometimes appear to wear the host's cosmetics.\n
+The above bug was *sorta* fixed before, but often appeared with random mod combinations related to rendering the player.
++ Fixed (attempted) a bug that may occur if playing an emote from a prop object and you swap item slots.
+# 2.1.19
++ Removed a zip of the previous TME version that was accidentally uploaded with 2.1.18. This will fix the doubled filed size.
+# 2.1.18
++ Added the Company Jig emote! (fornite edition)
++ Added 8 more new emotes: Potted Groot, Planetary Vibes, Bad Guy, Rebellious, Boney Bounce, Dancery, Challenge, Brite Moves
+# 2.1.17
++ Fixed bug with the MoreCompany patch that, while emoting, caused all players *not* wearing a cosmetic to appear to be wearing *your* cosmetics.
++ Removed old debugging logs.
+# 2.1.16
++ Fixed issue in the emote menu where the additional emote settings on the right would not properly register when the mouse was hovering over it, making some of the settings impossible to interact with.
++ Added a few extra logs.
++ Temp fix for harmless errors complaining about not being able to destroy a Light component when creating the player's animation previewer object.
++ The camera will now follow the player's head during first person emotes, and if moving while emoting is disabled. This was removed in a recent update temporarily.<br>
+Eventually, I will allow moving the camera a little, similar to when the game (soft) locks your camera in animations, such as using a terminal, or pulling the lever.
+# 2.1.15
++ Marked the Toothless dance song as *not* DMCA-free.
+# 2.1.14
++ Forgot to implement corrupted file checks when loading emote filter preferences.
+# 2.1.13
++ General tweaks/fixes.
++ While moving while emoting, holding/toggling the rotate (freeze) character hotkey will now stop the character's emote if they move, just like when you move when moving while emoting is disabled.<br>
+Previously, holding/toggling the rotate character hotkey would only freeze the rotation, but allow you to run straight, which sometimes felt like you were stuck in a bugged state when you really weren't.
++ You now shouldn't be able to zoom in/out while emoting if the emote menu is open.
+# 2.1.12
++ When color coding emote names in the radial menu is enabled, complementary emotes will keep the default (white) color instead of being shown as green.
++ Additional checks and fixes for loading preferences from file, to help prevent errors.
++ Created separate control tips for emoting in third person to better manage the control tips without changing the original control tips. The original control tips will be hidden while emoting instead of clearing them.
++ Optimized the third person camera controller logic, and fixed some minor issues.
+# 2.1.11
++ Fixed issue with the config: "AlwaysEmoteOnFirstEncounter" for masked enemies not being referenced, thus was the game was treating it as always enabled.
++ More potential automatic fixes in case of file corruption when loading favorited emotes. (or when loading old favorited emotes from old save location)
++ Added better solution/method for adding emote credits when group credits are earned. This *may* fix some issues with some players not receiving emote credits when supposed to.
++ After purchasing an emote, the terminal doesn't tell you which page the emote is on in the radial menu anymore. (this was old code before loadouts and filters were a thing)
++ Added verbose logs, and the option to enable them in the config.
+# 2.1.10
++ Updated the disco patch to not cause errors on v49.
+# 2.1.9
++ Converted the Controller crew emote prop (gamepad) to function as an emote prop is TooManyEmotesScrap is enabled.
++ You can now sync with *most* emotes that another player is performing. The performing emote does not have to loop anymore.
++ ~~Updated the disco patch to not cause errors on v49.~~
++ Mousing over emotes should now be accurate on all game window aspect ratios.<br>
+Previously, hovering over an emote in the radial menu might not have triggered until you mouse really far away from the center if you aspect ratio was far off from the default.
+# 2.1.8
++ Accidentally broke compat with ModelReplacementApi (I think). Should be fixed now.
+# 2.1.7
++ Fixed control tips while emoting showing the controls for when moving while emoting is enabled, but the host has this force disabled.
++ Possible fix where favorited emotes from the old save location were not being transferred to the new save file.
+# 2.1.6
++ Added a config option to allow the host to force disable moving while emoting for all players. This will remove the option from the emote menu for all players.
++ Removed duplicate TooManyEmotes dll. My bad
+# 2.1.5
++ You can now allow moving while emoting from the radial menu. This setting has been removed from the config, and will not sync with all clients anymore.
++ You can now rebind zooming in/out while emoting instead of the default scroll in/out. This only applies if you have the InputUtils mod enabled.
++ Updated logic for rotating character and zooming in/out while emoting in third person.
++ While emoting, *if moving while emoting is enabled*, the rotate character hotkey will instead freeze the character's rotation, and the zoom camera hotkey will only work while the rotate character hotkey is held.
++ You can now jump while emoting, if moving while emoting is enabled. Crouching or pressing escape to open the quick menu will cancel the emote.
++ Emotes from emote props will not be unlocked by default when I am a Party Pooper is enabled in the config. The host can change this in the config.
++ Patched the new disco ball so it temporarily mutes itself if someone is performing an emote with audio nearby.
++ Added config option for global persistent unlocked emotes. Unlike the persistent unlocked emotes that was previously added, these emotes will be unlocked globally, and you will have access to these emotes in any game in which the host has this setting enabled.<br>
+NOTE: When enabled, many emote settings in the config may be limited, or forced to their default values in order to prevent globally unlocking emotes easily. If you don't like this, consider only enabling persistent unlocked emotes. (not the global version)<br>
+ALSO NOTE: Global persistent emotes may currently have bugs, so please post any issues on the github, thank you!
++ A separate file will now be used to keep track of all user save data that is not related to a specific save. (favorite emotes, globally unlocked emotes)<br>
+This will be easier for people to fix corruption issues with this mod by deleting this file instead of the game saves.
++ Actually sorted emotes in the radial menu by name this time.
++ Emotes should stop immediately upon stop performing, unless performing an emote while already performing an emote. This will prevent camera jitter.
++ Fixed an error caused when performing an emote when quitting the game.
++ Fixed an issue where the ThirdPersonEmote preferences would try saving every time you close the emote menu, regardless on if you changed anything.
+# 2.1.4
++ Readded some UI configs to add optional colors. These will be tweaked again to not look so bright.
+# 2.1.3
++ V50 compatible!
++ Added 3 more emotes: Broke up, Pumping iron (prop emote), Paddle Royale (prop emote)
++ Assigned Take Me On (song) to Best Mates (dmca version)
++ Fixed issue with the MoreCompany patch preventing players' chat messages from reaching other players. Also, updated this to work on the latest MoreCompany update. (1.9.0)
++ More network optimizations.
++ Fixed issues with non-host clients not being able to perform the next emote in an emote sync group (such as Jug Band) when performing that emote on top of itself.
++ Fixed some emote menu preferences not saving when supposed to.
++ Emotes in the "All" section of the emote menu should be in alphabetical order now, with favorited emotes appearing first.
++ Fixed some links in readme/changelog not pointing to the right place.
++ Added some checks and protective measures in case of save corruption.
+# 2.1.2
++ Removed grabbable emote props as scrap from *this* mod.
++ Grabbable emote props are now associated with a separate mod, which will require this mod.<br>
+You can find this mod [here](https://thunderstore.io/c/lethal-company/p/FlipMods/TooManyEmotesScrap/).
++ You join other players, you both must either have the TooManyEmotesScrap mod enabled, or both have this mod disabled.<br>
+If you are hosting a lobby for random players to join, or you are looking to join random servers, it might be best to disable TooManyEmotesScrap for the best compatibility.
++ Fixed bug where players couldn't emote after performing an emote on a grabbable emote prop. Future emotes were not able to be played, even from the radial menu.
++ Fixed issue where non-host clients would sometimes have their emote immediately stopped if performing an emote while they were already performing another one.
++ Slight network optimizations in case this mod was causing lag.
++ Fixed camera stutter that sometimes occured when stopping an emote.
++ Various other code optimizations.
+# 2.1.1
++ Fixed issue with red collider box being rendered when performing an emote with props.
+# 2.1.0
++ Added grabbable emote props which can be found on moons as scrap. If this has issues, please disable feature in the config, and creating an issue about this on the github would be appreciated!
++ Fixed issue with "random" emotes, such as rps, or sexy saxophone, not syncing correctly with other clients.
++ Added more potential fixes for errors caused by joining/creating a second session during a single launch.
++ Fixed the MoreCompany patch after I broke it. Whoops. Cosmetics shouldn't duplicate or appear the same for every player when emoting, and the errors from applying the patch should be gone. (hopefully for good)
+# 2.0.11
++ Potential fixes for errors caused by joining/creating a second session during a single launch.
++ Renamed the emote props asset bundle to help prevent potential conflicts with other mods using the same name.
++ Loosened restrictions on if you can swap items during an emote.
++ Swapping items during an emote will now properly swap the holding animation.
+# 2.0.10
++ Fixed issue with the first person setting in the emote menu not saving.
++ Fixed the "I don't care" emote having the wrong start animation.
+# 2.0.9
++ Added 3 more emotes. AFK (complementary), Ma-ya-hi, and Snake Summoner.
++ Added first person emotes option in the emote menu. (experimental)
++ Added option in radial menu to only perform emote animations (no audio). This does not mute emotes, but prevents the audio from playing at all when you perform emotes. Other players will not hear the audio either.
++ Added the persistent emotes mode in the config. If enabled by the host, emotes will not be reset when the ship/game resets. Emote credits will still reset. These emotes are linked to the save in which they were unlocked on. (for now)
++ Applied patch for HelmetCameras to correctly render the local player's body from other players' cameras.
++ Revised some code a bit related to the emote audio to potentially fix issues with audio playing indefinitely. This is usually caused when emotes play audio on the player, rather than on the boombox/ship speaker.<br>
+If this is still an issue after this update, I would appreciate it if you could share any details about this on this mod's github page, and if possible, how to replicate this so I can investigate this further.
+# 2.0.8
++ Fixed issue with player's local helmet appearing on other players while they emote.
+# 2.0.7
++ First person cameras now animates during emotes. This currently only affects mods that let you see players' cameras, such as helmet/body cams. First person emoting will be added in the future as experimental.
++ Updated compat with LCVR to support new API and new method for detecting players in VR mode. If you still run into issues after this update, please let me know on the discord!
++ Added config option to force reset favorited emotes upon next boot. This may fix issues in some cases where the user has some favorited emotes that aren't in the game anymore. (the config setting will reset back to false if set to true, and after it resets the favorited emotes)
++ Other minor bug fixes.
+# 2.0.6
++ Potential fix for errors and camera issues caused by dying while emoting.
++ Added a config entry to disable the girl patch in case of it conflicting with another mod. This patch is to fix the issue with the emote camera seeing the girl while she's "unrendered".
+# 2.0.5
++ Added filters in the emote menu when showing "all emotes". You can hide complementary emotes this way if you want.
++ Fixed issue when syncing the sexy saxophone. This emote can randomly play one of two emotes with music. Syncing now always syncs the song.
++ Playing emote music on the ship speaker *shouldn't* mute the speaker anymore.
++ Performing jug band while in the same sync group as someone else will now play the next instrument, but stay in sync.
++ Tweaked some emote audio timing.
+# 2.0.4
++ Added Dance Moves music.
++ The ship speaker can now be used as an emote audio source. This can be disabled in the config.
++ Fixed emotes with multiple sub emotes from not being able to be favorited. (jug band, rps, etc)
++ Tweaked some audio settings.
++ Emote audio will now not play on a boombox if the boombox is currently playing its normal music. (normal music as in boombox music, not emote music)
++ Fixed terminal issue getting commands mixed up with ReservedItemSlotCore's new terminal command.
+# 2.0.3
++ Re-added audio after fixing some issues.
++ Sorted dmca and dmca-free audio, and added a dmca-free toggle in the emote menu.<br>
+In dmca-free mode, many songs will be muted, but some may be replaced by non-copyrighted versions.
++ Fixed issue with emote audio being heard (quietly) everywhere on the map.
++ Performing an emote with audio will always try to use the closest boombox to you now, instead of the closest boombox that was not playing audio. This helps when intending to perform audio on a specific boombox instead of another one that someone else had.
++ Re-added California Girls
++ Fixed issue with held item not moving with you during emotes.
++ Fixed another potential issue with favorited emotes disappearing.
++ For various emotes in the emote store, you may need to type the whole emote name if the name might conflict with an existing terminal command so the terminal command will not be blocked.
++ Fixed issue with controllers not being able to perform emotes.
+# 2.0.2
++ Didn't mean to remove Jug Band in 2.0.1, oops.
+# 2.0.1
++ Temporarily removing audio to fix some issues. Will reupload in a few days when I have free time.
+# 2.0.0
++ Added emote audio! These will automatically play on a nearby boombox that's not currently playing audio from an emote.
++ Added emotes with props!
++ Some emotes, such as those with musical instruments will not need a boombox in order to play audio.
++ The Jug band emote has been added, which is 1 emote, but includes 4 emotes with their own musical instrument, and up to 4 players can sync with the emote to perform a different instrument. Preview: https://youtu.be/tWsCQk6ODEk<br>
+More emotes like this may come in the future.
++ Added settings in the emote menu to mute and adjust emote audio volume, as well as added config options for more customization.
++ Fixed keybind display name issues. (hopefully for good)
++ Fixed compat with mods who manipulate the player's bones and cannot see emotes.
++ Please report any bugs with this update to me on the github page, thank you!
++ Re-added California Gurls
+# 1.9.5
++ Fixed issue where Masked Enemies that die while emoting continue emoting.
++ Re-added California Gurls. Again. Why does it keep getting removed???
++ Added more emotes!
++ Re-compressed animations. Sorry for the large file sizes the past few updates!
++ It seems that the animation preview in the emote menu doesn't work for the very first emote now, but once you preview another one, it starts to behave itself. Will fix later.
+# 1.9.4
++ Replaced the player's avatar to increase animation quality. This will help with most animations that rely on hand precision. Will be tweaking again soon.
++ Some emotes with a start and loop animation clip might not transition well. Or maybe it's just the windmill emote. I will fix this soon.
++ Fixed issue while syncing with a player's emote where your emote will always start from the beginning.
++ Finally fixed the issue with Corporate Restructure causing the emote camera to appear outside the ship. (spoiler, it was because their mod threw an error that prevented the game's player spawn animation method to run, which I hook onto)
++ Fixed the issue with not being able to scroll backwards on the emote menu pages when reversing the scroll direction in the config.
++ Removed false alarm errors about bones not being mapped. (should have been warnings instead, but removed anyways)
++ Not gonna lie, I feel like I broke something, but I can't find anything wrong... Sus. Just post any issues on the github please :)
+# 1.9.3
++ Did a goof and accidentally pushed some testing files into 1.9.2 that caused emotes to not show, thus showing the underlying default dance emote.
+# 1.9.2
++ Quickfix for LCVR compat mistake where all players running LCVR could not emote, even if VR mode was disabled.
+# 1.9.1
++ Fixed issue with update 1.9.0 breaking the scrolling in game. Whoops!
++ Readded the GetCurrentlyPlayingEmote method to the PlayerPatcher temporarily so the ModelReplacementAPI mod reference for my mod won't be broken.
++ Readded the California Girl emote. I did not mean to remove it :(
++ Removed complementary emotes from the common emotes category. They should only appear in the complementary emotes loadout in the radial menu now.
++ Added checks for cases where multiples of the same emote were being imported in. Probably my fault if this happens, but the mod should continue fine, though.
++ Upon opening the emote menu for the first time each session, the favorites loadout will be defaulted if you currently have unlocked favorited emotes.
+# 1.9.0
++ Restructured most of the code revolving around animations, animators, animator controllers, etc.
++ Animations from this mod now affect a separate animator and skeleton, and translates the animations to the actual player's rig realtime. (Thanks Nunchuck and Unsaved Trash from the Lethal Emotes API mod for the tips!)<br>
+Animations will now be much more compatible with other mods that may use/edit the players' animator/animator controller.
++ This mod no longer needs to disable/enable the player's animation rigging components in order to correctly animate the arms and legs. This will full remove the previous issue with legs/arms often deforming after performing emotes.
++ Fixed issue with cosmetics that have lights rendering the lights in the first person layer.
++ Fixed some issues with the terminal thinking they're trying to buy an emote when they're trying to go to the company building.
++ Added more complementary emotes.
++ Added more emotes in general. (probably removed some, I don't remember)
++ Probably broke a lot of compatibility with mods that reference classes and methods from this mod, such as LethalCompanyVR and ModelReplacementAPI.
++ Now automatically disables emoting for self when LCVR is enabled. LCVR should be good to remove their compat patches with this mod, and I have notified them of this.
++ Now implements custom networking methods to send/receive emote updates for players/masked players instead of relying on the in-game functions, which is still surprising that it worked at all.<br>
+These new methods should be much more reliable and future proof.
++ Various bugs and fixes that I can't even remember.
++ Probably broke some stuff, so please report bugs to me about this udpate!
+# 1.8.6
++ Tweaked terminal commands to be more accurate and smart when determining if someone is attempting to purchase an emote.
++ Added extra check when performing an emote just in case another mod changed the layer or visibility of the player's main body.
++ Added an optional keybind (only bindable with InputUtils) to force refresh the player's character model and layers. Unbound by default.
++ Fixed issue with keybind display names in hud not updating when setting a new keybind mid-game.
++ Fixed warnings when InputUtils is not enabled.
+# 1.8.5
++ Reverted one patch from 1.8.4 to fix character rig issue.
+# 1.8.4
++ Fixed case-sensitive issue when typing emotes commands in the terminal.
++ Fixed potential issue with various scripts, or other mods, activating comonents from the animation previewer object. Any components on this object that are not needed should be destroyed properly now.
++ Fixed issue with scrolling pages in the emote menu while an emote is selected and the animation preview freezes up.
++ Rebalanced default emote credits gained multiplier in the config.
++ Favorited emotes that have been temporarily removed should not be removed from favorites to prevent spam in the console.
++ Fixed issue when holding a movement key while starting certain emotes, where you would cancel the emote, but remain in third person.
++ You now cannot emote while a centipede is on your head. If a centipede latches onto your head while emoting, the emote will be canceled.
++ Fixed some feet animations for some emotes. Will be fixing more!
++ Readded the "It's you!" (spiderman pointing) emote. It's a complementary emote.
+# 1.8.3
++ Added full (or close to it?) controller support. Work best with the InputUtils mod, and the controls will be easily configurable.
++ Control tip lines should automatically update if you switch between keyboard/controller.
+# 1.8.2
++ Updated path for patching BetterEmotes.
++ Swapped some emotes out to fix some bouncing issues.
+# 1.8.1
++ Fixed camera not pitching up/down when allowing moving while emoting in the config.
++ Will not attempt to apply MoreCompany Cosmetics patch when AdvancedCompany is loaded.
++ Temporarily removed open emote menu keybind in HUD.
++ MaskedEnemies now shouldn't emote unless within a certain distance.
++ Updated README/Manifest description.
+# 1.8.0
++ There are now over 200 emotes!
++ Added a config setting to allow moving while emoting. This will sync with all clients. Rotating while emoting by holding a hotkey will be disabled when this is enabled.
++ Accidentally set the audio listening source to the emote camera when you stopped emoting. Should be fixed now.
++ Refixed mirror decor. Oops!
+# 1.7.18
++ Additional tweaks to maybe fix the emotes canceling for players at times.
+# 1.7.17
++ Fixed compat with certain terminal mods, such as Neofetch.
++ Fixed echoing in third person emote camera.
++ Made some small changes to maybe prevent issue with player's animations getting canceled when another player cancels their. Probably didn't fix it.
+# 1.7.16
++ Fixed compat with MoreCompany.
++ Fixed bug where emote credits were being depleted for everyone when one player purchased an emote with ShareEverything disabled.
++ Fixed bug with emotes/emote credits not being loaded correctly for non-host clients.
+# 1.7.15
++ Re-added hook method ModelReplacementAPI used to grab currently playing emotes. (I forgot it was referencing it)
+# 1.7.14
++ Tweaked some code to help a bit more with compat with mods that might edit the player's animator controller.
+# 1.7.13
++ Fixed issue with "start" emote clips not transition to the "loop" emote clip.
++ Fixed issue with certain emotes not knowing when they ended.
+# 1.7.12
++ Added checks in case the player's animator controller is not an AnimatorOverrideController.
++ Fixed issue with not being able to scroll in the emote menu.
+# 1.7.11
++ Restructure and reorganization of some code.
++ Fixed issue when the ShareEverything setting in the config is disabled and a player purchases an emote, the emote credits shouldn't be deducted from each player anymore.
++ Some UI tweaks.
++ Possible fix for the issue when players cancel an emote, other players emotes "break".
+# 1.7.10
++ Fixed issue with dress girl showing up in the third person emote camera when she's not supposed to be visible.
++ Attempted fix for lag caused by code when MoreCompany is not enabled. (Thanks legoandmars!)
++ Rotating while emote can now be set to toggle in the config.
++ Audio is now based off of the third person emote camera while emoting.
+# 1.7.9
++ Added more compat checks for More_Emotes. You should now be unable to emote while performing an emote from More_Emotes. (maybe even from other mods that add emotes)
++ The third person emote camera should now reset and swap back to the main camera if you die.
++ Attempted to fix some issues with translation mods causing issues when checking for certain values in the terminal. (hopefully fixed)
+# 1.7.8
++ Re-added Masked Enemies emoting for non-host clients. Will continue testing and tweaking if needed.
 # 1.7.7
 + Disabling Masked Enemy emotes for non-host client until I fix the bug with them.
 # 1.7.6
@@ -85,7 +379,7 @@ Favorited emotes will persist across sessions/saves or game launches. However, t
 + Brightened the animation preview a bit.
 + Few other changes.
 # 1.4.9
-+ Applied compatibility patch for BiggerLobby (Thanks <> Bobbie!)
++ Applied compatibility patch for BiggerLobby (Thanks legoandmars!)
 + Publicized most of my classes to help with compatibility.
 + Various minor fixes.
 # 1.4.8

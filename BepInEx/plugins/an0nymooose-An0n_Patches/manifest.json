@@ -1,6 +1,6 @@
 {
     "name": "An0n_Patches",
-    "version_number": "1.0.3",
+    "version_number": "1.0.4",
     "website_url": "",
     "description": "Crouch Jump, Health/Sprint in the HUD, better sprint movement.",
     "dependencies": [

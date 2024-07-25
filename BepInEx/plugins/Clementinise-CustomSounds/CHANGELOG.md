@@ -1,6 +1,26 @@
+-   **2.3.2**
+
+    -   Reintroduced the fix for instances where 'HideManagerGameObject' is not correctly set to 'true' in BepInEx.cfg, and included a reminder beneath the 'Host' button in the main meny to prompt users to restart the game for CustomSounds to work properly
+    -   Fixed a problem where some files ending with the number '3' or the letters 'w; a; v; m; p; o; g' could be incorrectly replaced
+    -   Altered the default location of the CustomSounds folder to be within the plugins directory to avoid accidental deletion during mod updates via a mod manager
+
+-   **2.3.1**
+
+    -   Fixed the percentage display error in the terminal
+    -   Resolved an issue where CustomSounds tried to load audio files from beyond its designated range
+    -   Introduced a sound count in the terminal to show the number of sounds being replaced
+
+-   **2.3.0**
+
+    -   You can now use .mp3 and .ogg file formats to replace the game's audio
+    -   AudioSource can be specified by appending '-AS' to the end of a folder's name
+    -   Updated the LCSoundTool dependency to version 1.5.0 to address certain issues and incorporate the above changes into CustomSounds
+    -   Refactored the hierarchy displayed in the terminal to improve readability
+    -   /!\ The syncing feature has been removed and will be reimplemented in a future update /!\
+
 -   **2.2.0**
 
-    -   You can now modify the 'Accept Sync' keybind through the In-Game keybind settings menu
+    -   Added 'Accept Sync' keybind through the In-Game keybind settings menu
 
 -   **2.1.2**
 

@@ -41,6 +41,36 @@ This mod is not affiliated with BiggerLobby/LethalPlayers nor does it use any co
 ```
 
 # Changelog
+## 1.9.4
+- Added slight workaround to fix player pitches in 4 player lobbies
+- Fixed default player volume being quieter than usual
+
+## 1.9.1
+- Cosmetic related bugfixes
+
+## 1.9.0
+- Added support for v50.
+- Fixed meaningless chat error.
+- Added various configuration options regarding cosmetics.
+- Fixed player count dialogues not allowing you to type small digits.
+- Fixed LAN player count issue at below 4 or above 50.
+- Made internal version of MC be calculated from the game number rather than a universal constant.
+
+## 1.8.1
+- Readded optimization which was accidentally removed.
+
+## 1.8.0
+- Fixed LAN support.
+- Loading screen icon now shows the MoreCompany logo.
+- Improved compatibility between other mods.
+
+## 1.7.6
+- Revert audio related changes. Will revisit at a later date.
+
+## 1.7.5
+- Fixed bug regarding mimics ignoring the local cosmetic setting and equipping player cosmetics anyway.
+- Minor "patch" relating to voice pitch. Only affects primary 4 players.
+
 ## 1.7.4
 - Fixed crew count changer not displaying on the host screen.
 
@@ -110,12 +140,10 @@ This mod is not affiliated with BiggerLobby/LethalPlayers nor does it use any co
 - Modified version text in bottom left corner to display (MC) next to it on the menu.
 - Prevented MoreCompany servers from showing up on public lobby displays. Only other MoreCompany users can see MoreCompany public lobbies.
 
-# Upcoming (Potentially)
-- More cosmetics.
-
 # [Discord Server](https://discord.gg/cKa6sPBFZ9)
 
 ## ```Contributors```
+- 1A3Dev
 - Krystilize
 
 ## ```Cosmetic Contributors```
