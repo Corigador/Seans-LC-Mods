@@ -1,0 +1,9 @@
+{
+	"name": "InfiniteShotgunAmmo",
+	"version_number": "1.0.3",
+	"website_url": "",
+	"description": "Gives you 999 ammo when you pick up the shotgun or reload it.",
+	"dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}

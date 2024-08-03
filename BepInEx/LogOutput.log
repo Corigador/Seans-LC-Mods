@@ -1,0 +1,35 @@
+[Message:   BepInEx] BepInEx 5.4.21.0 - Lethal Company (2023-11-26 3:46:46 PM)
+[Info   :   BepInEx] Running under Unity v2022.3.9.15351836
+[Info   :   BepInEx] CLR runtime version: 4.0.30319.42000
+[Info   :   BepInEx] Supports SRE: True
+[Info   :   BepInEx] System platform: Bits64, Windows
+[Message:   BepInEx] Preloader started
+[Info   :   BepInEx] Loaded 1 patcher method from [BepInEx.Preloader 5.4.21.0]
+[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Patching [UnityEngine.CoreModule] with [BepInEx.Chainloader]
+[Message:   BepInEx] Preloader finished
+[Message:   BepInEx] Chainloader ready
+[Message:   BepInEx] Chainloader started
+[Info   :   BepInEx] 2 plugins to load
+[Info   :   BepInEx] Loading [Hide And Seek 1.1.4]
+[Info   : Unity Log] Patching .RoundManagerPatch
+[Info   : Unity Log] Patching .TurretPatch
+[Info   : Unity Log] Patching .LandminePatch
+[Info   : Unity Log] Patching .SpikeRoofTrapPatch
+[Info   : Unity Log] Patching .ShotgunPatch
+[Info   : Unity Log] Patching .PlayerControllerBPatch
+[Info   : Unity Log] Patching .EntranceTeleportPatch
+[Info   : Unity Log] Patching .TerminalPatch
+[Info   : Unity Log] Patching .TimeOfDayPatch
+[Info   : Unity Log] Patching .HUDManagerPatch
+[Info   : Unity Log] Patching .GameNetworkManagerPatch
+[Info   : Unity Log] Patching .StartOfRoundPatch
+[Info   :Hide And Seek] Plugin gogozooom.HideAndSeek is loaded!
+[Info   :   BepInEx] Loading [LethalNetworkAPI 3.1.1]
+[Info   :LethalNetworkAPI] LethalNetworkAPI v3.1.1 has Loaded.
+[Message:   BepInEx] Chainloader startup complete
+[Info   : Unity Log] Saving changed settings
+[Info   : Unity Log] subcribing to steam callbacks
+[Info   : Unity Log] Returning week num: 33
+[Info   : Unity Log] week num: 33
+[Info   : Unity Log] unsubscribing from steam callbacks

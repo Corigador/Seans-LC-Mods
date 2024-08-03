@@ -1,0 +1,9 @@
+{
+    "name": "NoMonsters",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Angel-Madeline/No-Monsters",
+    "description": "A mod which removes all monsters. Note that turrets, landmines and circuit bees still remain.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
