@@ -1,9 +1,0 @@
-{
-    "name": "An0n_Patches",
-    "version_number": "1.0.4",
-    "website_url": "",
-    "description": "Crouch Jump, Health/Sprint in the HUD, better sprint movement.",
-    "dependencies": [
-        "BepInEx-BepInExPack-5.4.2100"
-    ]
-}

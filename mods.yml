@@ -1,0 +1,93 @@
+- manifestVersion: 1
+  name: Lordfirespeed-OdinSerializer
+  authorName: Lordfirespeed
+  websiteUrl: https://thunderstore.io/c/lethal-company/p/Lordfirespeed/OdinSerializer/
+  displayName: OdinSerializer
+  description: Fast, robust, powerful and extendible .NET serializer built for Unity
+  gameVersion: "0"
+  networkMode: both
+  packageType: other
+  installMode: managed
+  installedAtTime: 1722726917413
+  loaders: []
+  dependencies: []
+  incompatibilities: []
+  optionalDependencies: []
+  versionNumber:
+    major: 2022
+    minor: 11
+    patch: 9
+  enabled: true
+  icon: C:/Users/TheDo/AppData/Roaming/Thunderstore Mod
+    Manager/DataFolder/LethalCompany/cache/Lordfirespeed-OdinSerializer/2022.11.9/icon.png
+- manifestVersion: 1
+  name: BepInEx-BepInExPack
+  authorName: BepInEx
+  websiteUrl: https://thunderstore.io/c/lethal-company/p/BepInEx/BepInExPack/
+  displayName: BepInExPack
+  description: BepInEx pack for Mono Unity games. Preconfigured and ready to use.
+  gameVersion: "0"
+  networkMode: both
+  packageType: other
+  installMode: managed
+  installedAtTime: 1722726917510
+  loaders: []
+  dependencies: []
+  incompatibilities: []
+  optionalDependencies: []
+  versionNumber:
+    major: 5
+    minor: 4
+    patch: 2100
+  enabled: true
+  icon: C:/Users/TheDo/AppData/Roaming/Thunderstore Mod
+    Manager/DataFolder/LethalCompany/cache/BepInEx-BepInExPack/5.4.2100/icon.png
+- manifestVersion: 1
+  name: xilophor-LethalNetworkAPI
+  authorName: xilophor
+  websiteUrl: https://thunderstore.io/c/lethal-company/p/xilophor/LethalNetworkAPI/
+  displayName: LethalNetworkAPI
+  description: A library/API to allow developers to easily add networking to their mods.
+  gameVersion: "0"
+  networkMode: both
+  packageType: other
+  installMode: managed
+  installedAtTime: 1722726917589
+  loaders: []
+  dependencies:
+    - BepInEx-BepInExPack-5.4.2100
+    - Lordfirespeed-OdinSerializer-2022.11.9
+  incompatibilities: []
+  optionalDependencies: []
+  versionNumber:
+    major: 3
+    minor: 1
+    patch: 1
+  enabled: true
+  icon: C:/Users/TheDo/AppData/Roaming/Thunderstore Mod
+    Manager/DataFolder/LethalCompany/cache/xilophor-LethalNetworkAPI/3.1.1/icon.png
+- manifestVersion: 1
+  name: Gogozooom-Hide_And_Seek
+  authorName: Gogozooom
+  websiteUrl: https://thunderstore.io/c/lethal-company/p/Gogozooom/Hide_And_Seek/
+  displayName: Hide_And_Seek
+  description: v55! A Hide And Seek mod dedicated to making your life easier when
+    it comes to rules and finding the right mods.
+  gameVersion: "0"
+  networkMode: both
+  packageType: other
+  installMode: managed
+  installedAtTime: 1722726917676
+  loaders: []
+  dependencies:
+    - BepInEx-BepInExPack-5.4.2100
+    - xilophor-LethalNetworkAPI-3.1.1
+  incompatibilities: []
+  optionalDependencies: []
+  versionNumber:
+    major: 1
+    minor: 1
+    patch: 4
+  enabled: true
+  icon: C:/Users/TheDo/AppData/Roaming/Thunderstore Mod
+    Manager/DataFolder/LethalCompany/cache/Gogozooom-Hide_And_Seek/1.1.4/icon.png
